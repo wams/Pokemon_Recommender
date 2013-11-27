@@ -1,0 +1,642 @@
+%PDF-1.4
+%“Œ‹ž ReportLab Generated PDF document http://www.reportlab.com
+% 'BasicFonts': class PDFDictionary 
+1 0 obj
+% The standard fonts dictionary
+<< /F1 2 0 R
+ /F2 5 0 R >>
+endobj
+% 'F1': class PDFType1Font 
+2 0 obj
+% Font Helvetica
+<< /BaseFont /Helvetica
+ /Encoding /WinAnsiEncoding
+ /Name /F1
+ /Subtype /Type1
+ /Type /Font >>
+endobj
+% 'Annot.NUMBER1': class PDFDictionary 
+3 0 obj
+<< /A << /S /URI
+ /Type /Action
+ /URI (https://github.com/veekun/pokedex.) >>
+ /Border [ 0
+ 0
+ 0 ]
+ /Rect [ 331.1294
+ 753.7736
+ 410.86
+ 765.7736 ]
+ /Subtype /Link
+ /Type /Annot >>
+endobj
+% 'Annot.NUMBER2': class PDFDictionary 
+4 0 obj
+<< /A << /S /URI
+ /Type /Action
+ /URI (http://www.sqlalchemy.org/) >>
+ /Border [ 0
+ 0
+ 0 ]
+ /Rect [ 241.1129
+ 683.4272
+ 293.9029
+ 695.4272 ]
+ /Subtype /Link
+ /Type /Annot >>
+endobj
+% 'F2': class PDFType1Font 
+5 0 obj
+% Font Courier
+<< /BaseFont /Courier
+ /Encoding /WinAnsiEncoding
+ /Name /F2
+ /Subtype /Type1
+ /Type /Font >>
+endobj
+% 'Page1': class PDFPage 
+6 0 obj
+% Page dictionary
+<< /Annots [ 3 0 R
+ 4 0 R ]
+ /Contents 11 0 R
+ /MediaBox [ 0
+ 0
+ 595.2756
+ 841.8898 ]
+ /Parent 10 0 R
+ /Resources << /Font 1 0 R
+ /ProcSet [ /PDF
+ /Text
+ /ImageB
+ /ImageC
+ /ImageI ] >>
+ /Rotate 0
+ /Trans <<  >>
+ /Type /Page >>
+endobj
+% 'Page2': class PDFPage 
+7 0 obj
+% Page dictionary
+<< /Contents 12 0 R
+ /MediaBox [ 0
+ 0
+ 595.2756
+ 841.8898 ]
+ /Parent 10 0 R
+ /Resources << /Font 1 0 R
+ /ProcSet [ /PDF
+ /Text
+ /ImageB
+ /ImageC
+ /ImageI ] >>
+ /Rotate 0
+ /Trans <<  >>
+ /Type /Page >>
+endobj
+% 'R8': class PDFCatalog 
+8 0 obj
+% Document Root
+<< /Outlines 13 0 R
+ /PageLabels 14 0 R
+ /PageMode /UseNone
+ /Pages 10 0 R
+ /Type /Catalog >>
+endobj
+% 'R9': class PDFInfo 
+9 0 obj
+<< /Author ()
+ /CreationDate (D:20131113104009+06'00')
+ /Creator (\(unspecified\))
+ /Keywords ()
+ /Producer (ReportLab PDF Library - www.reportlab.com)
+ /Subject (\(unspecified\))
+ /Title () >>
+endobj
+% 'R10': class PDFPages 
+10 0 obj
+% page tree
+<< /Count 2
+ /Kids [ 6 0 R
+ 7 0 R ]
+ /Type /Pages >>
+endobj
+% 'R11': class PDFStream 
+11 0 obj
+% page stream
+<< /Length 6827 >>
+stream
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+q
+1 0 0 1 62.69291 741.0236 cm
+q
+BT 1 0 0 1 0 14 Tm .000542 Tw 12 TL /F1 10 Tf 0 0 0 rg (The data we will be using for our assignment is coming from ) Tj 0 0 .501961 rg (veekun's pokedex) Tj 0 0 0 rg (, which is avalible on github) Tj T* 0 Tw (This data and api is free to use and under the MIT liscense.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 712.6772 cm
+n 0 14.17323 m 469.8898 14.17323 l S
+Q
+q
+1 0 0 1 62.69291 682.6772 cm
+q
+BT 1 0 0 1 0 14 Tm .980651 Tw 12 TL /F1 10 Tf 0 0 0 rg (The data is originally stored in multiple comma seperated lists, however, the api already converts these) Tj T* 0 Tw (lists into an sqlite database, and utilizes ) Tj 0 0 .501961 rg (sqlalchemy ) Tj 0 0 0 rg (as an interface to access the data.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 654.3307 cm
+n 0 14.17323 m 469.8898 14.17323 l S
+Q
+q
+1 0 0 1 62.69291 636.3307 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Some code utilizing the api is shown below:) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 435.1307 cm
+q
+q
+1 0 0 1 0 0 cm
+q
+1 0 0 1 6.6 6.6 cm
+q
+.662745 .662745 .662745 RG
+.5 w
+.960784 .960784 .862745 rg
+n -6 -6 468.6898 192 re B*
+Q
+q
+0 0 0 rg
+BT 1 0 0 1 0 170 Tm /F2 10 Tf 12 TL (session = connect\(\)) Tj T* (moves = session.query\(tables.Move\)) Tj T* (moves = moves.join\(tables.Move.type\)) Tj T* (num_moves_with_type = 0) Tj T* (typeCount = {}) Tj T* (for move in moves:) Tj T* (    if not \(move.type.identifier in typeCount\):) Tj T* (        typeCount[ move.type.identifier ] = 0) Tj T* (    typeCount[move.type.identifier] += 1) Tj T* (print "+------------------+----------------+") Tj T* (print "| Type             | Number of Moves|") Tj T* (print "+==================+================+") Tj T* (for type_name in typeCount:) Tj T* (    print "|%s|%s|" % \(type_name, typeCount[type_name]\)) Tj T* (    print "+------------+------------+") Tj T* ET
+Q
+Q
+Q
+Q
+Q
+q
+1 0 0 1 62.69291 398.7843 cm
+n 0 14.17323 m 469.8898 14.17323 l S
+Q
+q
+1 0 0 1 62.69291 380.7843 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (This creates the following table:) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 374.7843 cm
+Q
+q
+1 0 0 1 62.69291 86.78425 cm
+1 1 1 rg
+n 0 288 469.8898 -18 re f*
+.878431 .878431 .878431 rg
+n 0 270 469.8898 -18 re f*
+1 1 1 rg
+n 0 252 469.8898 -18 re f*
+.878431 .878431 .878431 rg
+n 0 234 469.8898 -18 re f*
+1 1 1 rg
+n 0 216 469.8898 -18 re f*
+.878431 .878431 .878431 rg
+n 0 198 469.8898 -18 re f*
+1 1 1 rg
+n 0 180 469.8898 -18 re f*
+.878431 .878431 .878431 rg
+n 0 162 469.8898 -18 re f*
+1 1 1 rg
+n 0 144 469.8898 -18 re f*
+.878431 .878431 .878431 rg
+n 0 126 469.8898 -18 re f*
+1 1 1 rg
+n 0 108 469.8898 -18 re f*
+.878431 .878431 .878431 rg
+n 0 90 469.8898 -18 re f*
+1 1 1 rg
+n 0 72 469.8898 -18 re f*
+.878431 .878431 .878431 rg
+n 0 54 469.8898 -18 re f*
+1 1 1 rg
+n 0 36 469.8898 -18 re f*
+.878431 .878431 .878431 rg
+n 0 18 469.8898 -18 re f*
+.960784 .960784 .862745 rg
+n 0 288 469.8898 -18 re f*
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 273 cm
+q
+.960784 .960784 .862745 rg
+n 0 0 175.9559 12 re f*
+Q
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 76.86295 0 Td (Type) Tj T* -76.86295 0 Td ET
+Q
+Q
+q
+1 0 0 1 193.9559 273 cm
+q
+.960784 .960784 .862745 rg
+n 0 0 269.9339 12 re f*
+Q
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 95.51193 0 Td (Number of Moves) Tj T* -95.51193 0 Td ET
+Q
+Q
+0 0 0 rg
+q
+1 0 0 1 6 255 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (ghost) Tj T* ET
+Q
+Q
+q
+1 0 0 1 193.9559 255 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (18) Tj T* ET
+Q
+Q
+q
+1 0 0 1 6 237 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (water) Tj T* ET
+Q
+Q
+q
+1 0 0 1 193.9559 237 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (27) Tj T* ET
+Q
+Q
+q
+1 0 0 1 6 219 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (shadow) Tj T* ET
+Q
+Q
+q
+1 0 0 1 193.9559 219 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (18) Tj T* ET
+Q
+Q
+q
+1 0 0 1 6 201 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (electric) Tj T* ET
+Q
+Q
+q
+1 0 0 1 193.9559 201 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (27) Tj T* ET
+Q
+Q
+q
+1 0 0 1 6 183 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (normal) Tj T* ET
+Q
+Q
+q
+1 0 0 1 193.9559 183 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (168) Tj T* ET
+Q
+Q
+q
+1 0 0 1 6 165 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (fire) Tj T* ET
+Q
+Q
+q
+1 0 0 1 193.9559 165 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (30) Tj T* ET
+Q
+Q
+q
+1 0 0 1 6 147 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (psychic) Tj T* ET
+Q
+Q
+q
+1 0 0 1 193.9559 147 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (53) Tj T* ET
+Q
+Q
+q
+1 0 0 1 6 129 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (flying) Tj T* ET
+Q
+Q
+q
+1 0 0 1 193.9559 129 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (23) Tj T* ET
+Q
+Q
+q
+1 0 0 1 6 111 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (steel) Tj T* ET
+Q
+Q
+q
+1 0 0 1 193.9559 111 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (19) Tj T* ET
+Q
+Q
+q
+1 0 0 1 6 93 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (rock) Tj T* ET
+Q
+Q
+q
+1 0 0 1 193.9559 93 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (15) Tj T* ET
+Q
+Q
+q
+1 0 0 1 6 75 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (ice) Tj T* ET
+Q
+Q
+q
+1 0 0 1 193.9559 75 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (21) Tj T* ET
+Q
+Q
+q
+1 0 0 1 6 57 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (poison) Tj T* ET
+Q
+Q
+q
+1 0 0 1 193.9559 57 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (23) Tj T* ET
+Q
+Q
+q
+1 0 0 1 6 39 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (dark) Tj T* ET
+Q
+Q
+q
+1 0 0 1 193.9559 39 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (31) Tj T* ET
+Q
+Q
+q
+1 0 0 1 6 21 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (fighting) Tj T* ET
+Q
+Q
+q
+1 0 0 1 193.9559 21 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (42) Tj T* ET
+Q
+Q
+q
+1 0 0 1 6 3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (dragon) Tj T* ET
+Q
+Q
+q
+1 0 0 1 193.9559 3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (13) Tj T* ET
+Q
+Q
+q
+1 J
+1 j
+0 0 0 RG
+.25 w
+n 0 0 m 469.8898 0 l S
+n 0 270 m 469.8898 270 l S
+n 0 252 m 469.8898 252 l S
+n 0 234 m 469.8898 234 l S
+n 0 216 m 469.8898 216 l S
+n 0 198 m 469.8898 198 l S
+n 0 180 m 469.8898 180 l S
+n 0 162 m 469.8898 162 l S
+n 0 144 m 469.8898 144 l S
+n 0 126 m 469.8898 126 l S
+n 0 108 m 469.8898 108 l S
+n 0 90 m 469.8898 90 l S
+n 0 72 m 469.8898 72 l S
+n 0 54 m 469.8898 54 l S
+n 0 36 m 469.8898 36 l S
+n 0 18 m 469.8898 18 l S
+n 187.9559 0 m 187.9559 288 l S
+n 0 288 m 469.8898 288 l S
+n 0 0 m 0 288 l S
+n 469.8898 0 m 469.8898 288 l S
+Q
+Q
+ 
+endstream
+endobj
+% 'R12': class PDFStream 
+12 0 obj
+% page stream
+<< /Length 1317 >>
+stream
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+q
+1 0 0 1 62.69291 693.0236 cm
+1 1 1 rg
+n 0 72 469.8898 -18 re f*
+.878431 .878431 .878431 rg
+n 0 54 469.8898 -18 re f*
+1 1 1 rg
+n 0 36 469.8898 -18 re f*
+.878431 .878431 .878431 rg
+n 0 18 469.8898 -18 re f*
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 57 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (fairy) Tj T* ET
+Q
+Q
+q
+1 0 0 1 193.9559 57 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (16) Tj T* ET
+Q
+Q
+q
+1 0 0 1 6 39 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (grass) Tj T* ET
+Q
+Q
+q
+1 0 0 1 193.9559 39 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (37) Tj T* ET
+Q
+Q
+q
+1 0 0 1 6 21 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (bug) Tj T* ET
+Q
+Q
+q
+1 0 0 1 193.9559 21 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (25) Tj T* ET
+Q
+Q
+q
+1 0 0 1 6 3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (ground) Tj T* ET
+Q
+Q
+q
+1 0 0 1 193.9559 3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (19) Tj T* ET
+Q
+Q
+q
+1 J
+1 j
+0 0 0 RG
+.25 w
+n 0 72 m 469.8898 72 l S
+n 0 54 m 469.8898 54 l S
+n 0 36 m 469.8898 36 l S
+n 0 18 m 469.8898 18 l S
+n 187.9559 0 m 187.9559 72 l S
+n 0 0 m 0 72 l S
+n 469.8898 0 m 469.8898 72 l S
+n 0 0 m 469.8898 0 l S
+Q
+Q
+q
+1 0 0 1 62.69291 693.0236 cm
+Q
+ 
+endstream
+endobj
+% 'R13': class PDFOutlines 
+13 0 obj
+<< /Count 0
+ /Type /Outlines >>
+endobj
+% 'R14': class PDFPageLabels 
+14 0 obj
+% Document Root
+<< /Nums [ 0
+ 15 0 R
+ 1
+ 16 0 R ] >>
+endobj
+% 'R15': class PDFPageLabel 
+15 0 obj
+% None
+<< /S /D
+ /St 1 >>
+endobj
+% 'R16': class PDFPageLabel 
+16 0 obj
+% None
+<< /S /D
+ /St 2 >>
+endobj
+xref
+0 17
+0000000000 65535 f
+0000000113 00000 n
+0000000221 00000 n
+0000000398 00000 n
+0000000648 00000 n
+0000000880 00000 n
+0000001039 00000 n
+0000001346 00000 n
+0000001625 00000 n
+0000001782 00000 n
+0000002026 00000 n
+0000002141 00000 n
+0000009067 00000 n
+0000010485 00000 n
+0000010568 00000 n
+0000010674 00000 n
+0000010751 00000 n
+trailer
+<< /ID 
+ % ReportLab generated PDF document -- digest (http://www.reportlab.com) 
+ [(\327\352\270q\242}s\200B\177\026d~\311\364H) (\327\352\270q\242}s\200B\177\026d~\311\364H)] 
+
+ /Info 9 0 R
+ /Root 8 0 R
+ /Size 17 >>
+startxref
+10798
+%%EOF
